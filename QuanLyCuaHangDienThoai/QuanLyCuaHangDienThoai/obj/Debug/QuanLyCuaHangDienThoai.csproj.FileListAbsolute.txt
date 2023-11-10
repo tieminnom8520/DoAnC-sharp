@@ -1,0 +1,10 @@
+C:\Users\tuanl\source\repos\Đồ Án C#\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\bin\Debug\QuanLyCuaHangDienThoai.exe.config
+C:\Users\tuanl\source\repos\Đồ Án C#\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\bin\Debug\QuanLyCuaHangDienThoai.exe
+C:\Users\tuanl\source\repos\Đồ Án C#\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\bin\Debug\QuanLyCuaHangDienThoai.pdb
+C:\Users\tuanl\source\repos\Đồ Án C#\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.csproj.AssemblyReference.cache
+C:\Users\tuanl\source\repos\Đồ Án C#\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.GUI.UI.resources
+C:\Users\tuanl\source\repos\Đồ Án C#\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.Properties.Resources.resources
+C:\Users\tuanl\source\repos\Đồ Án C#\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.csproj.GenerateResource.cache
+C:\Users\tuanl\source\repos\Đồ Án C#\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.csproj.CoreCompileInputs.cache
+C:\Users\tuanl\source\repos\Đồ Án C#\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.exe
+C:\Users\tuanl\source\repos\Đồ Án C#\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.pdb
