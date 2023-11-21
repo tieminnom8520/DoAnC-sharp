@@ -78,6 +78,12 @@
     <Compile Include="GUI\QuanLyKhuyenMai\QuanLyKhuyenMaiFrm.Designer.cs">
       <DependentUpon>QuanLyKhuyenMaiFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\QuanLyKhuyenMai\Them_Sua_KM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyKhuyenMai\Them_Sua_KM.Designer.cs">
+      <DependentUpon>Them_Sua_KM.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\QuanLySanPham\CapNhatSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLyKhuyenMai\QuanLyKhuyenMaiFrm.resx">
       <DependentUpon>QuanLyKhuyenMaiFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyKhuyenMai\Them_Sua_KM.resx">
+      <DependentUpon>Them_Sua_KM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLySanPham\CapNhatSanPham.resx">
       <DependentUpon>CapNhatSanPham.cs</DependentUpon>

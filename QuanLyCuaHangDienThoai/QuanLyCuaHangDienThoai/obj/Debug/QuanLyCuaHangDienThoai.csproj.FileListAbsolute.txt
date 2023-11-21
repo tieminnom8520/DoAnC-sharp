@@ -24,3 +24,4 @@ C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\Quan
 C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.GUI.QuanLyKhuyenMai.QuanLyKhuyenMaiFrm.resources
 C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.GUI.QuanLySanPham.ChiTietSanPham.resources
 C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.GUI.QuanLyKhuyenMai.Them_Sua_KhuyenMai.resources
+C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.GUI.QuanLyKhuyenMai.Them_Sua_KM.resources
