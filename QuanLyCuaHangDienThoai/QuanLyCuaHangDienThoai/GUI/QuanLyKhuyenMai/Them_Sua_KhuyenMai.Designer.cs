@@ -46,6 +46,14 @@
             this.chonLbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -100,14 +108,13 @@
             // 
             // sanpham_listview
             // 
-            this.sanpham_listview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.sanpham_listview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sanpham_listview.FullRowSelect = true;
             this.sanpham_listview.HideSelection = false;
-            this.sanpham_listview.Location = new System.Drawing.Point(17, 182);
+            this.sanpham_listview.Location = new System.Drawing.Point(3, 47);
+            this.sanpham_listview.MultiSelect = false;
             this.sanpham_listview.Name = "sanpham_listview";
-            this.sanpham_listview.Size = new System.Drawing.Size(295, 307);
+            this.sanpham_listview.Size = new System.Drawing.Size(337, 307);
             this.sanpham_listview.TabIndex = 6;
             this.sanpham_listview.UseCompatibleStateImageBehavior = false;
             this.sanpham_listview.View = System.Windows.Forms.View.Details;
@@ -115,22 +122,20 @@
             // 
             // ctkm_listview
             // 
-            this.ctkm_listview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctkm_listview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ctkm_listview.FullRowSelect = true;
             this.ctkm_listview.HideSelection = false;
-            this.ctkm_listview.Location = new System.Drawing.Point(431, 182);
+            this.ctkm_listview.Location = new System.Drawing.Point(455, 47);
+            this.ctkm_listview.MultiSelect = false;
             this.ctkm_listview.Name = "ctkm_listview";
-            this.ctkm_listview.Size = new System.Drawing.Size(316, 307);
+            this.ctkm_listview.Size = new System.Drawing.Size(328, 307);
             this.ctkm_listview.TabIndex = 7;
             this.ctkm_listview.UseCompatibleStateImageBehavior = false;
             this.ctkm_listview.View = System.Windows.Forms.View.Details;
             // 
             // themBtn
             // 
-            this.themBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.themBtn.Location = new System.Drawing.Point(333, 249);
+            this.themBtn.Location = new System.Drawing.Point(15, 97);
             this.themBtn.Name = "themBtn";
             this.themBtn.Size = new System.Drawing.Size(75, 23);
             this.themBtn.TabIndex = 8;
@@ -140,8 +145,7 @@
             // 
             // boBtn
             // 
-            this.boBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.boBtn.Location = new System.Drawing.Point(333, 278);
+            this.boBtn.Location = new System.Drawing.Point(15, 126);
             this.boBtn.Name = "boBtn";
             this.boBtn.Size = new System.Drawing.Size(75, 23);
             this.boBtn.TabIndex = 9;
@@ -151,8 +155,7 @@
             // 
             // button4
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.Location = new System.Drawing.Point(333, 307);
+            this.button4.Location = new System.Drawing.Point(15, 155);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 11;
@@ -162,9 +165,8 @@
             // 
             // button5
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(654, 526);
+            this.button5.Location = new System.Drawing.Point(232, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(93, 29);
             this.button5.TabIndex = 12;
@@ -174,9 +176,8 @@
             // 
             // button6
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(555, 526);
+            this.button6.Location = new System.Drawing.Point(133, 3);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(93, 29);
             this.button6.TabIndex = 13;
@@ -186,9 +187,8 @@
             // 
             // PhanTramTxt
             // 
-            this.PhanTramTxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.PhanTramTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhanTramTxt.Location = new System.Drawing.Point(202, 526);
+            this.PhanTramTxt.Location = new System.Drawing.Point(186, 3);
             this.PhanTramTxt.Name = "PhanTramTxt";
             this.PhanTramTxt.Size = new System.Drawing.Size(110, 26);
             this.PhanTramTxt.TabIndex = 14;
@@ -196,10 +196,9 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 529);
+            this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(177, 20);
             this.label4.TabIndex = 15;
@@ -207,67 +206,115 @@
             // 
             // moTaTxt
             // 
-            this.moTaTxt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.moTaTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.moTaTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moTaTxt.Location = new System.Drawing.Point(136, 44);
             this.moTaTxt.Name = "moTaTxt";
-            this.moTaTxt.Size = new System.Drawing.Size(429, 90);
+            this.moTaTxt.Size = new System.Drawing.Size(477, 90);
             this.moTaTxt.TabIndex = 16;
             this.moTaTxt.Text = "";
             // 
             // chonLbl
             // 
-            this.chonLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.chonLbl.AutoSize = true;
+            this.chonLbl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chonLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chonLbl.Location = new System.Drawing.Point(19, 492);
+            this.chonLbl.Location = new System.Drawing.Point(3, 357);
             this.chonLbl.Name = "chonLbl";
-            this.chonLbl.Size = new System.Drawing.Size(169, 20);
+            this.chonLbl.Size = new System.Drawing.Size(337, 26);
             this.chonLbl.TabIndex = 17;
             this.chonLbl.Text = "Sản phẩm đang chọn: ";
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 149);
+            this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 20);
+            this.label5.Size = new System.Drawing.Size(337, 44);
             this.label5.TabIndex = 18;
             this.label5.Text = "Sản phẩm :";
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(427, 149);
+            this.label6.Location = new System.Drawing.Point(455, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(203, 20);
+            this.label6.Size = new System.Drawing.Size(328, 44);
             this.label6.TabIndex = 19;
             this.label6.Text = "Các sản phẩm khuyến mãi :\r\n";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.88653F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.11348F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 333F));
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.chonLbl, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.ctkm_listview, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.sanpham_listview, 0, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 140);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.39437F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.60564F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(786, 425);
+            this.tableLayoutPanel1.TabIndex = 20;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.label4);
+            this.flowLayoutPanel1.Controls.Add(this.PhanTramTxt);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 386);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(337, 36);
+            this.flowLayoutPanel1.TabIndex = 21;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.button5);
+            this.flowLayoutPanel2.Controls.Add(this.button6);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(455, 386);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(328, 36);
+            this.flowLayoutPanel2.TabIndex = 21;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.themBtn);
+            this.panel1.Controls.Add(this.boBtn);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(346, 47);
+            this.panel1.MaximumSize = new System.Drawing.Size(103, 307);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(103, 307);
+            this.panel1.TabIndex = 22;
             // 
             // Them_Sua_KhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(767, 561);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.chonLbl);
+            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.moTaTxt);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.PhanTramTxt);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.boBtn);
-            this.Controls.Add(this.themBtn);
-            this.Controls.Add(this.ctkm_listview);
-            this.Controls.Add(this.sanpham_listview);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.label2);
@@ -277,6 +324,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm khuyến mãi";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,5 +355,9 @@
         private System.Windows.Forms.Label chonLbl;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
