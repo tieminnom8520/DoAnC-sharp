@@ -44,8 +44,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblDateTime = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -82,7 +82,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(1264, 681);
-            this.splitContainer1.SplitterDistance = 223;
+            this.splitContainer1.SplitterDistance = 222;
             this.splitContainer1.TabIndex = 1;
             // 
             // btnDangXuat
@@ -96,7 +96,7 @@
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangXuat.Location = new System.Drawing.Point(0, 636);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(223, 45);
+            this.btnDangXuat.Size = new System.Drawing.Size(222, 45);
             this.btnDangXuat.TabIndex = 4;
             this.btnDangXuat.Text = "Đăng Xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
@@ -115,6 +115,7 @@
             this.tabKhuyenMai.TabIndex = 4;
             this.tabKhuyenMai.Text = "Khuyến Mãi";
             this.tabKhuyenMai.UseVisualStyleBackColor = false;
+            this.tabKhuyenMai.Click += new System.EventHandler(this.tabKhuyenMai_Click);
             // 
             // tabNhaCungCap
             // 
@@ -221,6 +222,7 @@
             this.tabSanPham.TabIndex = 4;
             this.tabSanPham.Text = "Sản Phẩm";
             this.tabSanPham.UseVisualStyleBackColor = false;
+            this.tabSanPham.Click += new System.EventHandler(this.tabSanPham_Click);
             // 
             // label3
             // 
@@ -269,7 +271,7 @@
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Margin = new System.Windows.Forms.Padding(0);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(223, 681);
+            this.treeView1.Size = new System.Drawing.Size(222, 681);
             this.treeView1.TabIndex = 0;
             // 
             // splitContainer2
@@ -284,20 +286,13 @@
             this.splitContainer2.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.splitContainer2.Panel1.Controls.Add(this.lblDateTime);
             this.splitContainer2.Panel1.Controls.Add(this.label1);
-            this.splitContainer2.Size = new System.Drawing.Size(1037, 681);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer2.Size = new System.Drawing.Size(1038, 681);
             this.splitContainer2.SplitterDistance = 92;
             this.splitContainer2.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome: (username)";
             // 
             // lblDateTime
             // 
@@ -309,6 +304,17 @@
             this.lblDateTime.Size = new System.Drawing.Size(72, 18);
             this.lblDateTime.TabIndex = 0;
             this.lblDateTime.Text = "Datetime";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(39, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(161, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Welcome: (username)";
             // 
             // UI
             // 

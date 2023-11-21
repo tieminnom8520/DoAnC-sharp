@@ -8,19 +8,19 @@ namespace QuanLyCuaHangDienThoai.DTO
 {
     internal class ChiTietKhuyenMaiDTO
     {
-        private string maKM;
-        private string maSP;
+        private int maKM;
+        private int maSP;
         private int phanTram;
 
-        public ChiTietKhuyenMaiDTO(string maKM, string maSP, int phanTram)
+        public ChiTietKhuyenMaiDTO(int maKM, int maSP, int phanTram)
         {
             this.maKM = maKM;
             this.maSP = maSP;
             this.phanTram = phanTram;
         }
 
-        public string MaKM { get => maKM; set => maKM = value; }
-        public string MaSP { get => maSP; set => maSP = value; }
+        public int MaKM { get => maKM; set => maKM = value; }
+        public int MaSP { get => maSP; set => maSP = value; }
         public int PhanTram { get => phanTram; set => phanTram = value; }
     }
 }
