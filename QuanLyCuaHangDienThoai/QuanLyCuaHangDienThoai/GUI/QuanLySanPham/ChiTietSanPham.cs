@@ -25,9 +25,9 @@ namespace QuanLyCuaHangDienThoai.GUI.QuanLySanPham
             this.StartPosition = FormStartPosition.CenterScreen;
             // hiển thị thông tin
             if (File.Exists(AppDomain.CurrentDomain.BaseDirectory+ "\\..\\..\\img\\dienthoai\\" + sp.ImageURL + ".png"))
-                HinhAnhPic.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "\\..\\..\\img\\dienthoai\\" + sp.ImageURL + ".png");
+                HinhAnhPic.BackgroundImage = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "\\..\\..\\img\\dienthoai\\" + sp.ImageURL + ".png");
             else
-                HinhAnhPic.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "\\..\\..\\img\\dienthoai\\notfound.png");
+                HinhAnhPic.BackgroundImage = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "\\..\\..\\img\\dienthoai\\notfound.png");
             txtTenSp.Text = "Tên sản phẩm :" + sp.TenSP;
             txtHang.Text = "Hãng : " + sp.Hang.Trim();
 

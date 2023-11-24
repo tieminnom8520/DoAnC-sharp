@@ -69,7 +69,7 @@ namespace QuanLyCuaHangDienThoai.DTO
 
         public string insertString()
         {
-            return  String.Format("insert into SanPham values(N'{0}',N'{1}',N'{2}',{3},{4},N'{5}',N'{6}',N'{7}',N'{8}',N'{9}',N'{10}',{11},{12},'N{13}','N{14}',N'{15}')",
+            return  String.Format("insert into SanPham values(N'{0}',N'{1}',N'{2}',{3},{4},N'{5}',N'{6}',N'{7}',N'{8}',N'{9}',N'{10}',{11},{12},N'{13}',N'{14}',N'{15}')",
                 TenSP,ImageURL,Hang,DonGia,0,CPU, GPU,RAM,BoNho, ManHinh,HeDieuHanh,NamSX,ThoiGianBaoHanh,Pin, PhuKien, Camera);
         }
 

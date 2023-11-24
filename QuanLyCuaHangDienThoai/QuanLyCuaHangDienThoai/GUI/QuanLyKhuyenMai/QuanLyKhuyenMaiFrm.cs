@@ -171,10 +171,5 @@ namespace QuanLyCuaHangDienThoai.GUI.QuanLyKhuyenMai
             else
                 MessageBox.Show("Bạn phải chọn 1 khuyến mãi");
         }
-
-        private void estThemReponsiveBtn_Click(object sender, EventArgs e)
-        {
-            new Them_Sua_KM().Show();
-        }
     }
 }
