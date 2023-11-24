@@ -14,7 +14,7 @@ namespace QuanLyCuaHangDienThoai
         SqlConnection sqlConn;
         SqlDataAdapter da;//Bo dieu phoi du lieu
         DataSet ds; //Doi tuong chhua CSDL khi giao tiep 
-        static string strCnn = "Data Source=DESKTOP-2T74JR3\\SQLEXPRESS; Database=CuaHangDienThoai; Integrated Security = True";
+        static string strCnn = "Data Source=DESKTOP-b92hk9o\\SQLEXPRESS; Database=CuaHangDienThoai; Integrated Security = True";
 
         public  Database()
         {

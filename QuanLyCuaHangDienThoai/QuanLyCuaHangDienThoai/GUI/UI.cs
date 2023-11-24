@@ -25,7 +25,7 @@ namespace QuanLyCuaHangDienThoai.GUI
 
         private void UI_Load(object sender, EventArgs e)
         {
-            lblDateTime.Text = DateTime.Today.ToString();
+            lblDateTime.Text = DateTime.Now.ToString();
         }
 
         private void tabSanPham_Click(object sender, EventArgs e)
@@ -58,5 +58,22 @@ namespace QuanLyCuaHangDienThoai.GUI
                 splitContainer2.Panel2.Controls.Add(qlkm_form);
             }
         }
+
+        private void tabKhachHang_Click(object sender, EventArgs e)
+        {
+            splitContainer2.Panel2.Controls.Clear();
+            KhachHang_GUI kh = new KhachHang_GUI();
+            kh.Dock = DockStyle.Fill;
+            splitContainer2.Panel2.Controls.Add(kh);
+        }
+
+        private void tabHoaDon_Click(object sender, EventArgs e)
+        {
+            splitContainer2.Panel2.Controls.Clear();
+            HoaDon_GUI hd = new HoaDon_GUI();
+            hd.Dock = DockStyle.Fill;
+            splitContainer2.Panel2.Controls.Add(hd);
+        }
+
     }
 }

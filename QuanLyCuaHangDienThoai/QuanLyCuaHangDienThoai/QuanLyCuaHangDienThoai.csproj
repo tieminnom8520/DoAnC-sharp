@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\HoaDon_BUS.cs" />
+    <Compile Include="BUS\KhachHang_BUS.cs" />
     <Compile Include="BUS\KhuyenMaiBUS.cs" />
     <Compile Include="BUS\SanPhamBUS.cs" />
     <Compile Include="DAO\Database.cs" />
@@ -65,6 +67,18 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HoaDon_GUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\HoaDon_GUI.Designer.cs">
+      <DependentUpon>HoaDon_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhachHang_GUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHang_GUI.Designer.cs">
+      <DependentUpon>KhachHang_GUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\QuanLyKhuyenMai\Them_Sua_KhuyenMai.cs">
       <SubType>Form</SubType>
