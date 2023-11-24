@@ -78,18 +78,6 @@
     <Compile Include="GUI\QuanLyKhuyenMai\QuanLyKhuyenMaiFrm.Designer.cs">
       <DependentUpon>QuanLyKhuyenMaiFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QuanLyKhuyenMai\Them_Sua_KM.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\QuanLyKhuyenMai\Them_Sua_KM.Designer.cs">
-      <DependentUpon>Them_Sua_KM.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\QuanLySanPham\CapNhatSanPham.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\QuanLySanPham\CapNhatSanPham.Designer.cs">
-      <DependentUpon>CapNhatSanPham.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\QuanLySanPham\ChiTietSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,11 +90,11 @@
     <Compile Include="GUI\QuanLySanPham\QuanLySanPhamForm.Designer.cs">
       <DependentUpon>QuanLySanPhamForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QuanLySanPham\ThemSanPham.cs">
-      <SubType>Form</SubType>
+    <Compile Include="GUI\QuanLySanPham\Them_Sua_SanPhamForm.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\QuanLySanPham\ThemSanPham.Designer.cs">
-      <DependentUpon>ThemSanPham.cs</DependentUpon>
+    <Compile Include="GUI\QuanLySanPham\Them_Sua_SanPhamForm.Designer.cs">
+      <DependentUpon>Them_Sua_SanPhamForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\UI.cs">
       <SubType>Form</SubType>
@@ -122,20 +110,14 @@
     <EmbeddedResource Include="GUI\QuanLyKhuyenMai\QuanLyKhuyenMaiFrm.resx">
       <DependentUpon>QuanLyKhuyenMaiFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLyKhuyenMai\Them_Sua_KM.resx">
-      <DependentUpon>Them_Sua_KM.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLySanPham\CapNhatSanPham.resx">
-      <DependentUpon>CapNhatSanPham.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLySanPham\ChiTietSanPham.resx">
       <DependentUpon>ChiTietSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLySanPham\QuanLySanPhamForm.resx">
       <DependentUpon>QuanLySanPhamForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLySanPham\ThemSanPham.resx">
-      <DependentUpon>ThemSanPham.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\QuanLySanPham\Them_Sua_SanPhamForm.resx">
+      <DependentUpon>Them_Sua_SanPhamForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UI.resx">
       <DependentUpon>UI.cs</DependentUpon>
@@ -148,6 +130,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -163,6 +146,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\back.png" />
     <Content Include="img\bill.png" />
     <Content Include="img\coupon.png" />
     <Content Include="img\deal.png" />
@@ -170,8 +154,10 @@
     <Content Include="img\invoice.png" />
     <Content Include="img\logout.png" />
     <Content Include="img\rating.png" />
+    <Content Include="img\refresh.png" />
     <Content Include="img\smartphone %282%29.png" />
     <Content Include="img\smartphone %283%29.png" />
+    <Content Include="img\upload.png" />
     <Content Include="img\user.png" />
   </ItemGroup>
   <ItemGroup />

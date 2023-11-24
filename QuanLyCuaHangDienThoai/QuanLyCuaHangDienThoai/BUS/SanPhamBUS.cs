@@ -23,6 +23,8 @@ namespace QuanLyCuaHangDienThoai.BUS
         public int ascending = 0;
         public string sortingColumn = null;
 
+        public DataRow sanPhamDangChon;
+
         public SanPhamBUS()
         {
             db = new Database();

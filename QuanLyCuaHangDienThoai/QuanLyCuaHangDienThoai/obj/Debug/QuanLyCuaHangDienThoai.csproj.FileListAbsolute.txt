@@ -19,9 +19,7 @@ C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\Quan
 C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\bin\Debug\QuanLyCuaHangDienThoai.exe.config
 C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\bin\Debug\QuanLyCuaHangDienThoai.exe
 C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\bin\Debug\QuanLyCuaHangDienThoai.pdb
-C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.GUI.QuanLySanPham.ThemSanPham.resources
-C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.GUI.QuanLySanPham.CapNhatSanPham.resources
 C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.GUI.QuanLyKhuyenMai.QuanLyKhuyenMaiFrm.resources
 C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.GUI.QuanLySanPham.ChiTietSanPham.resources
 C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.GUI.QuanLyKhuyenMai.Them_Sua_KhuyenMai.resources
-C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.GUI.QuanLyKhuyenMai.Them_Sua_KM.resources
+C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.GUI.QuanLySanPham.Them_Sua_SanPhamForm.resources

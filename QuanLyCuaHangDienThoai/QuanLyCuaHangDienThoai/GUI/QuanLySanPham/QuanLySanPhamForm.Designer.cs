@@ -55,7 +55,8 @@
             this.SanPhamListView.View = System.Windows.Forms.View.Details;
             this.SanPhamListView.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.SanPhamListView_ColumnClick);
             this.SanPhamListView.SizeChanged += new System.EventHandler(this.SanPhamListView_SizeChanged);
-            this.SanPhamListView.Click += new System.EventHandler(this.SanPhamListView_Click);
+            this.SanPhamListView.Click += new System.EventHandler(this.chonSanPham);
+            this.SanPhamListView.DoubleClick += new System.EventHandler(this.SanPhamListView_Click);
             // 
             // timKiemSPtxt
             // 

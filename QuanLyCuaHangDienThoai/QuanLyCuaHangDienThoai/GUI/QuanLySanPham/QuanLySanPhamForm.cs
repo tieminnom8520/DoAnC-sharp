@@ -18,6 +18,8 @@ namespace QuanLyCuaHangDienThoai.GUI.QuanLySanPham
     public partial class QuanLySanPhamForm : UserControl
     {
         SanPhamBUS sp_bus;
+        Them_Sua_SanPhamForm themSpForm;
+        public UI parent_f;
         public QuanLySanPhamForm()
         {
             InitializeComponent();
@@ -28,8 +30,10 @@ namespace QuanLyCuaHangDienThoai.GUI.QuanLySanPham
 
         public void loadHang()
         {
+            sp_bus.layDanhSachHang();
             ArrayList  dsHang = sp_bus.DsHang;
-            for(int i =0;  i<dsHang.Count; i++)
+            HangPanel.Controls.Clear();
+            for (int i =0;  i<dsHang.Count; i++)
             {
                 CheckBox checkBox = new CheckBox(); 
                 checkBox.Text = dsHang[i].ToString();
@@ -74,7 +78,10 @@ namespace QuanLyCuaHangDienThoai.GUI.QuanLySanPham
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new ThemSanPham(this,sp_bus).Show();
+            themSpForm =  new Them_Sua_SanPhamForm(this,sp_bus);
+            themSpForm.Dock = DockStyle.Fill;
+            parent_f.splitContainer2.Panel2.Controls.Clear();
+            parent_f.splitContainer2.Panel2.Controls.Add(themSpForm);
         }
 
         public void resizeTableSanPham()
@@ -95,28 +102,10 @@ namespace QuanLyCuaHangDienThoai.GUI.QuanLySanPham
 
             if (SanPhamListView.SelectedIndices.Count > 0)
             {
-                int selectedRow = SanPhamListView.SelectedIndices[0];
-
-                SanPhamDTO sanpham = new SanPhamDTO(
-                    Int32.Parse(sp_bus.DsHienThi.Rows[selectedRow][0].ToString()),
-                    sp_bus.DsHienThi.Rows[selectedRow][1].ToString(),
-                    sp_bus.DsHienThi.Rows[selectedRow][2].ToString(),
-                    sp_bus.DsHienThi.Rows[selectedRow][3].ToString(),
-                    Int64.Parse(sp_bus.DsHienThi.Rows[selectedRow][4].ToString().Split('.')[0]),
-                    Int32.Parse(sp_bus.DsHienThi.Rows[selectedRow][5].ToString()),
-                    sp_bus.DsHienThi.Rows[selectedRow][6].ToString(),
-                    sp_bus.DsHienThi.Rows[selectedRow][7].ToString(),
-                    sp_bus.DsHienThi.Rows[selectedRow][8].ToString(),
-                    sp_bus.DsHienThi.Rows[selectedRow][9].ToString(),
-                    sp_bus.DsHienThi.Rows[selectedRow][10].ToString(),
-                    sp_bus.DsHienThi.Rows[selectedRow][11].ToString(),
-                    Int32.Parse(sp_bus.DsHienThi.Rows[selectedRow][12].ToString()),
-                    Int32.Parse(sp_bus.DsHienThi.Rows[selectedRow][13].ToString()),
-                    sp_bus.DsHienThi.Rows[selectedRow][14].ToString(),
-                    sp_bus.DsHienThi.Rows[selectedRow][15].ToString(),
-                    sp_bus.DsHienThi.Rows[selectedRow][16].ToString()
-                    );
-                new CapNhatSanPham(this,sanpham, sp_bus).Show();
+                themSpForm = new Them_Sua_SanPhamForm(this, sp_bus, true);
+                themSpForm.Dock = DockStyle.Fill;
+                parent_f.splitContainer2.Panel2.Controls.Clear();
+                parent_f.splitContainer2.Panel2.Controls.Add(themSpForm);
             }
             else
             {
@@ -133,6 +122,7 @@ namespace QuanLyCuaHangDienThoai.GUI.QuanLySanPham
         {
             sp_bus.timKiem(timKiemSPtxt.Text.Trim().ToLower());
             hienThiSanPham();
+            loadHang();
         }
 
         private void SanPhamListView_ColumnClick(object sender, ColumnClickEventArgs e)
@@ -178,6 +168,15 @@ namespace QuanLyCuaHangDienThoai.GUI.QuanLySanPham
                     data[10].ToString(), data[11].ToString(), Int32.Parse(data[12].ToString()), Int32.Parse(data[13].ToString()), data[14].ToString(),
                     data[15].ToString(), data[16].ToString());
                 new ChiTietSanPham(sanpham).Show();
+            }
+        }
+
+        private void chonSanPham(object sender, EventArgs e)
+        {
+            if (SanPhamListView.SelectedIndices.Count > 0)
+            {
+                sp_bus.sanPhamDangChon = sp_bus.DsHienThi.Rows[SanPhamListView.SelectedIndices[0]];
+                /*MessageBox.Show(sp_bus.sanPhamDangChon[1].ToString());*/
             }
         }
     }
