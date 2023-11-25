@@ -20,6 +20,7 @@ namespace QuanLyCuaHangDienThoai.GUI
         }
         private void HoaDon_GUI_Load(object sender, EventArgs e)
         {
+            //tab 1
             lsvSanPham.FullRowSelect = true;
             lsvSanPham.View = View.Details;
             lsvSanPham.Columns.Add("Mã sản phẩm");
@@ -41,14 +42,29 @@ namespace QuanLyCuaHangDienThoai.GUI
 
             txtNgayLap.Text = DateTime.Now.ToString();
             loadSanPham();
-            loadKhachHang();
-            btnXoa.Enabled = btnThanhToan.Enabled = txtTienTra.Enabled = false;
+            btnXoa.Enabled = btnThanhToan.Enabled = txtTienTra.Enabled = txtDiaChi.Enabled = false;
+            cboTrangThai.SelectedIndex = 1;
+
+            //tab 2
+            lsvHoaDon.FullRowSelect = true;
+            lsvHoaDon.View = View.Details;
+            lsvHoaDon.Columns.Add("Mã hóa đơn");
+            lsvHoaDon.Columns.Add("Khách hàng");
+            lsvHoaDon.Columns.Add("Nhân viên");
+            lsvHoaDon.Columns.Add("Ngày lập");
+            lsvHoaDon.Columns.Add("Địa chỉ giao");
+            lsvHoaDon.Columns.Add("Tổng tiền");
+            lsvHoaDon.Columns.Add("Trạng thái");
+            lsvHoaDon.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            lsvHoaDon.Columns[0].Width = 0;
+            cboTrangThai.Enabled = false;
         }
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
             loadSanPham();
-            loadKhachHang();
+            loadHoaDon();
         }
+        //tab lập
         private void loadSanPham()
         {
             lsvSanPham.Items.Clear();
@@ -66,13 +82,6 @@ namespace QuanLyCuaHangDienThoai.GUI
             lsvSanPham.AutoResizeColumn(4, ColumnHeaderAutoResizeStyle.HeaderSize);
             lsvSanPham.Columns[0].Width = 0;
             btnThem.Enabled = false;
-        }
-        private void loadKhachHang()
-        {
-            DataTable dt = hd.layDanhSachKhachHang();
-            cboKhachHang.DataSource = dt;
-            cboKhachHang.DisplayMember = "TENKH";
-            cboKhachHang.ValueMember = "MAKH";
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -129,10 +138,12 @@ namespace QuanLyCuaHangDienThoai.GUI
             if (tongtien == 0)
             {
                 txtTienTra.Enabled = false;
+                btnThanhToan.Enabled = false;
             }
             else
             {
                 txtTienTra.Enabled = true;
+                btnThanhToan.Enabled = true;
             }
             txtTongTien.Text = tongtien.ToString();
         }
@@ -143,6 +154,24 @@ namespace QuanLyCuaHangDienThoai.GUI
             {
                 if (soluong <= Int32.Parse(lsvSanPham.SelectedItems[0].SubItems[4].Text))
                 {
+                    for(int i = 0; i < lsvCTHoaDon.Items.Count; i++)
+                    {
+                        if (lsvCTHoaDon.Items[0].SubItems[0].Text.Equals(lsvSanPham.SelectedItems[0].SubItems[0].Text))
+                        {
+                            lsvCTHoaDon.Items[i].SubItems[3].Text = (Int32.Parse(lsvCTHoaDon.Items[i].SubItems[3].Text) + soluong).ToString();
+                            double thanhtienmoi = double.Parse(lsvCTHoaDon.Items[i].SubItems[2].Text) * Int32.Parse(lsvCTHoaDon.Items[i].SubItems[3].Text);
+                            lsvCTHoaDon.Items[i].SubItems[4].Text = thanhtienmoi.ToString();
+
+                            lsvSanPham.SelectedItems[0].SubItems[4].Text = (Int32.Parse(lsvSanPham.SelectedItems[0].SubItems[4].Text) - soluong).ToString();
+                            txtSoLuong.Text = "";
+                            btnThem.Enabled = false;
+                            btnThanhToan.Enabled = true;
+
+                            tinhTongTien();
+                            return;
+                        }    
+                    }    
+
                     ListViewItem lvi = lsvCTHoaDon.Items.Add(lsvSanPham.SelectedItems[0].SubItems[0].Text);
                     lvi.SubItems.Add(lsvSanPham.SelectedItems[0].SubItems[1].Text);
                     lvi.SubItems.Add(lsvSanPham.SelectedItems[0].SubItems[3].Text);
@@ -224,5 +253,106 @@ namespace QuanLyCuaHangDienThoai.GUI
                 txtTienThoi.Text = "";
             }
         }
+
+        private void cboTrangThai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if( cboTrangThai.SelectedIndex == 1 )
+            {
+                txtDiaChi.Enabled = false;
+                txtDiaChi.Text = "";
+            }    
+            else
+            {
+                txtDiaChi.Enabled = true;
+            }    
+        }
+
+        //tab quản lý
+        private void loadHoaDon()
+        {
+            lsvHoaDon.Items.Clear();
+            DataTable dt = hd.layDanhSachHoaDon(checkBox1.Checked);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                ListViewItem lvi = lsvHoaDon.Items.Add(dt.Rows[i][0].ToString());
+                lvi.SubItems.Add(dt.Rows[i][1].ToString());
+                lvi.SubItems.Add(dt.Rows[i][2].ToString());
+                lvi.SubItems.Add(dt.Rows[i][3].ToString());
+                lvi.SubItems.Add(dt.Rows[i][4].ToString());
+                lvi.SubItems.Add(dt.Rows[i][5].ToString());
+                if (dt.Rows[i][6].ToString() == "1")
+                {
+                    lvi.SubItems.Add("Đã thanh toán");
+                }
+                else
+                {
+                    lvi.SubItems.Add("Chưa thanh toán");
+                }
+            }
+            lsvHoaDon.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            lsvHoaDon.Columns[0].Width = 0;
+            btnSuaTrangThai.Enabled = false;
+        }
+
+        private void btnTimTheoTen_Click(object sender, EventArgs e)
+        {
+            lsvHoaDon.Items.Clear();
+            DataTable dt = hd.timHoaDon(txtTenKhachHang.Text, checkBox1.Checked);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                ListViewItem lvi = lsvHoaDon.Items.Add(dt.Rows[i][0].ToString());
+                lvi.SubItems.Add(dt.Rows[i][1].ToString());
+                lvi.SubItems.Add(dt.Rows[i][2].ToString());
+                lvi.SubItems.Add(dt.Rows[i][3].ToString());
+                lvi.SubItems.Add(dt.Rows[i][4].ToString());
+                lvi.SubItems.Add(dt.Rows[i][5].ToString());
+                if(dt.Rows[i][6].ToString() == "1")
+                {
+                    lvi.SubItems.Add("Đã thanh toán");
+                }
+                else
+                {
+                    lvi.SubItems.Add("Chưa thanh toán");
+                }    
+            }
+            lsvHoaDon.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            lsvHoaDon.Columns[0].Width = 0;
+            btnSuaTrangThai.Enabled = false;
+        }
+
+        private void lsvHoaDon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if( lsvHoaDon.SelectedIndices.Count > 0 )
+            {
+                if (lsvHoaDon.SelectedItems[0].SubItems[6].Text.Equals("Đã thanh toán"))
+                {
+                    cboTrangThai2.Enabled = false;
+                    cboTrangThai2.SelectedIndex = cboTrangThai2.FindString(lsvHoaDon.SelectedItems[0].SubItems[6].Text);
+                    btnSuaTrangThai.Enabled = false;
+                }    
+                else
+                {
+                    cboTrangThai2.Enabled = true;
+                    cboTrangThai2.SelectedIndex = cboTrangThai2.FindString(lsvHoaDon.SelectedItems[0].SubItems[6].Text);
+                    btnSuaTrangThai.Enabled = true;
+                }    
+            }
+            else
+            {
+                btnSuaTrangThai.Enabled = false;
+            }    
+        }
+        private void btnSuaTrangThai_Click(object sender, EventArgs e)
+        {
+            hd.suaHoaDon(lsvHoaDon.SelectedItems[0].SubItems[0].Text);
+            MessageBox.Show("Sửa hóa đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            loadHoaDon();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            loadHoaDon();
+        }
+        
     }
 }

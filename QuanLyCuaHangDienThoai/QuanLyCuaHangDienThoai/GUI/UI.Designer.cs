@@ -35,26 +35,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnDangXuat = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.tabNhanVien = new System.Windows.Forms.Button();
-            this.tabDonNhap = new System.Windows.Forms.Button();
             this.tabSanPham = new System.Windows.Forms.Button();
-            this.tabKhachHang = new System.Windows.Forms.Button();
             this.tabKhuyenMai = new System.Windows.Forms.Button();
+            this.tabDonNhap = new System.Windows.Forms.Button();
             this.tabNhaCungCap = new System.Windows.Forms.Button();
-            this.tabHoaDon = new System.Windows.Forms.Button();
             this.tabTaiKhoan = new System.Windows.Forms.Button();
+            this.tabKhachHang = new System.Windows.Forms.Button();
+            this.tabHoaDon = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.lblDateTime = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.menu = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.SuspendLayout();
@@ -70,10 +69,18 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.menu);
+            this.splitContainer1.Panel1.Controls.Add(this.tabNhanVien);
+            this.splitContainer1.Panel1.Controls.Add(this.tabDonNhap);
             this.splitContainer1.Panel1.Controls.Add(this.logo);
+            this.splitContainer1.Panel1.Controls.Add(this.tabSanPham);
             this.splitContainer1.Panel1.Controls.Add(this.btnDangXuat);
-            this.splitContainer1.Panel1.Controls.Add(this.panel1);
+            this.splitContainer1.Panel1.Controls.Add(this.tabHoaDon);
             this.splitContainer1.Panel1.Controls.Add(this.treeView1);
+            this.splitContainer1.Panel1.Controls.Add(this.tabKhuyenMai);
+            this.splitContainer1.Panel1.Controls.Add(this.tabNhaCungCap);
+            this.splitContainer1.Panel1.Controls.Add(this.tabKhachHang);
+            this.splitContainer1.Panel1.Controls.Add(this.tabTaiKhoan);
             // 
             // splitContainer1.Panel2
             // 
@@ -148,22 +155,6 @@
             this.btnDangXuat.Text = "Đăng Xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel1.Controls.Add(this.tabNhanVien);
-            this.panel1.Controls.Add(this.tabSanPham);
-            this.panel1.Controls.Add(this.tabKhuyenMai);
-            this.panel1.Controls.Add(this.tabDonNhap);
-            this.panel1.Controls.Add(this.tabNhaCungCap);
-            this.panel1.Controls.Add(this.tabTaiKhoan);
-            this.panel1.Controls.Add(this.tabKhachHang);
-            this.panel1.Controls.Add(this.tabHoaDon);
-            this.panel1.Location = new System.Drawing.Point(0, 205);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(262, 425);
-            this.panel1.TabIndex = 6;
-            // 
             // tabNhanVien
             // 
             this.tabNhanVien.AutoSize = true;
@@ -173,28 +164,12 @@
             this.tabNhanVien.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("tabNhanVien.Image")));
             this.tabNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tabNhanVien.Location = new System.Drawing.Point(0, 41);
+            this.tabNhanVien.Location = new System.Drawing.Point(0, 262);
             this.tabNhanVien.Name = "tabNhanVien";
             this.tabNhanVien.Size = new System.Drawing.Size(269, 45);
             this.tabNhanVien.TabIndex = 4;
             this.tabNhanVien.Text = "Nhân Viên";
             this.tabNhanVien.UseVisualStyleBackColor = false;
-            // 
-            // tabDonNhap
-            // 
-            this.tabDonNhap.AutoSize = true;
-            this.tabDonNhap.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tabDonNhap.FlatAppearance.BorderColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tabDonNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tabDonNhap.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabDonNhap.Image = ((System.Drawing.Image)(resources.GetObject("tabDonNhap.Image")));
-            this.tabDonNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tabDonNhap.Location = new System.Drawing.Point(0, 249);
-            this.tabDonNhap.Name = "tabDonNhap";
-            this.tabDonNhap.Size = new System.Drawing.Size(269, 45);
-            this.tabDonNhap.TabIndex = 4;
-            this.tabDonNhap.Text = "Đơn Nhập";
-            this.tabDonNhap.UseVisualStyleBackColor = false;
             // 
             // tabSanPham
             // 
@@ -205,30 +180,13 @@
             this.tabSanPham.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabSanPham.Image = ((System.Drawing.Image)(resources.GetObject("tabSanPham.Image")));
             this.tabSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tabSanPham.Location = new System.Drawing.Point(0, 0);
+            this.tabSanPham.Location = new System.Drawing.Point(0, 221);
             this.tabSanPham.Name = "tabSanPham";
             this.tabSanPham.Size = new System.Drawing.Size(269, 45);
             this.tabSanPham.TabIndex = 4;
             this.tabSanPham.Text = "Sản Phẩm";
             this.tabSanPham.UseVisualStyleBackColor = false;
             this.tabSanPham.Click += new System.EventHandler(this.tabSanPham_Click);
-            // 
-            // tabKhachHang
-            // 
-            this.tabKhachHang.AutoSize = true;
-            this.tabKhachHang.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tabKhachHang.FlatAppearance.BorderColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tabKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tabKhachHang.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("tabKhachHang.Image")));
-            this.tabKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tabKhachHang.Location = new System.Drawing.Point(0, 125);
-            this.tabKhachHang.Name = "tabKhachHang";
-            this.tabKhachHang.Size = new System.Drawing.Size(269, 45);
-            this.tabKhachHang.TabIndex = 4;
-            this.tabKhachHang.Text = "Khách Hàng";
-            this.tabKhachHang.UseVisualStyleBackColor = false;
-            this.tabKhachHang.Click += new System.EventHandler(this.tabKhachHang_Click);
             // 
             // tabKhuyenMai
             // 
@@ -239,13 +197,29 @@
             this.tabKhuyenMai.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabKhuyenMai.Image = ((System.Drawing.Image)(resources.GetObject("tabKhuyenMai.Image")));
             this.tabKhuyenMai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tabKhuyenMai.Location = new System.Drawing.Point(0, 291);
+            this.tabKhuyenMai.Location = new System.Drawing.Point(0, 512);
             this.tabKhuyenMai.Name = "tabKhuyenMai";
             this.tabKhuyenMai.Size = new System.Drawing.Size(269, 45);
             this.tabKhuyenMai.TabIndex = 4;
             this.tabKhuyenMai.Text = "Khuyến Mãi";
             this.tabKhuyenMai.UseVisualStyleBackColor = false;
             this.tabKhuyenMai.Click += new System.EventHandler(this.tabKhuyenMai_Click);
+            // 
+            // tabDonNhap
+            // 
+            this.tabDonNhap.AutoSize = true;
+            this.tabDonNhap.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tabDonNhap.FlatAppearance.BorderColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tabDonNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tabDonNhap.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabDonNhap.Image = ((System.Drawing.Image)(resources.GetObject("tabDonNhap.Image")));
+            this.tabDonNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tabDonNhap.Location = new System.Drawing.Point(0, 470);
+            this.tabDonNhap.Name = "tabDonNhap";
+            this.tabDonNhap.Size = new System.Drawing.Size(269, 45);
+            this.tabDonNhap.TabIndex = 4;
+            this.tabDonNhap.Text = "Đơn Nhập";
+            this.tabDonNhap.UseVisualStyleBackColor = false;
             // 
             // tabNhaCungCap
             // 
@@ -256,29 +230,12 @@
             this.tabNhaCungCap.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabNhaCungCap.Image = ((System.Drawing.Image)(resources.GetObject("tabNhaCungCap.Image")));
             this.tabNhaCungCap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tabNhaCungCap.Location = new System.Drawing.Point(0, 165);
+            this.tabNhaCungCap.Location = new System.Drawing.Point(0, 386);
             this.tabNhaCungCap.Name = "tabNhaCungCap";
             this.tabNhaCungCap.Size = new System.Drawing.Size(269, 45);
             this.tabNhaCungCap.TabIndex = 4;
             this.tabNhaCungCap.Text = "Nhà Cung Cấp";
             this.tabNhaCungCap.UseVisualStyleBackColor = false;
-            // 
-            // tabHoaDon
-            // 
-            this.tabHoaDon.AutoSize = true;
-            this.tabHoaDon.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tabHoaDon.FlatAppearance.BorderColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tabHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tabHoaDon.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("tabHoaDon.Image")));
-            this.tabHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tabHoaDon.Location = new System.Drawing.Point(0, 207);
-            this.tabHoaDon.Name = "tabHoaDon";
-            this.tabHoaDon.Size = new System.Drawing.Size(269, 45);
-            this.tabHoaDon.TabIndex = 4;
-            this.tabHoaDon.Text = "Hóa Đơn";
-            this.tabHoaDon.UseVisualStyleBackColor = false;
-            this.tabHoaDon.Click += new System.EventHandler(this.tabHoaDon_Click);
             // 
             // tabTaiKhoan
             // 
@@ -289,12 +246,46 @@
             this.tabTaiKhoan.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabTaiKhoan.Image = ((System.Drawing.Image)(resources.GetObject("tabTaiKhoan.Image")));
             this.tabTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tabTaiKhoan.Location = new System.Drawing.Point(0, 83);
+            this.tabTaiKhoan.Location = new System.Drawing.Point(0, 304);
             this.tabTaiKhoan.Name = "tabTaiKhoan";
             this.tabTaiKhoan.Size = new System.Drawing.Size(269, 45);
             this.tabTaiKhoan.TabIndex = 4;
             this.tabTaiKhoan.Text = "Tài Khoản";
             this.tabTaiKhoan.UseVisualStyleBackColor = false;
+            // 
+            // tabKhachHang
+            // 
+            this.tabKhachHang.AutoSize = true;
+            this.tabKhachHang.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tabKhachHang.FlatAppearance.BorderColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tabKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tabKhachHang.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("tabKhachHang.Image")));
+            this.tabKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tabKhachHang.Location = new System.Drawing.Point(0, 346);
+            this.tabKhachHang.Name = "tabKhachHang";
+            this.tabKhachHang.Size = new System.Drawing.Size(269, 45);
+            this.tabKhachHang.TabIndex = 4;
+            this.tabKhachHang.Text = "Khách Hàng";
+            this.tabKhachHang.UseVisualStyleBackColor = false;
+            this.tabKhachHang.Click += new System.EventHandler(this.tabKhachHang_Click);
+            // 
+            // tabHoaDon
+            // 
+            this.tabHoaDon.AutoSize = true;
+            this.tabHoaDon.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tabHoaDon.FlatAppearance.BorderColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tabHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tabHoaDon.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("tabHoaDon.Image")));
+            this.tabHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tabHoaDon.Location = new System.Drawing.Point(0, 428);
+            this.tabHoaDon.Name = "tabHoaDon";
+            this.tabHoaDon.Size = new System.Drawing.Size(269, 45);
+            this.tabHoaDon.TabIndex = 4;
+            this.tabHoaDon.Text = "Hóa Đơn";
+            this.tabHoaDon.UseVisualStyleBackColor = false;
+            this.tabHoaDon.Click += new System.EventHandler(this.tabHoaDon_Click);
             // 
             // treeView1
             // 
@@ -350,6 +341,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome: (username)";
             // 
+            // menu
+            // 
+            this.menu.Location = new System.Drawing.Point(0, 211);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(269, 419);
+            this.menu.TabIndex = 0;
+            // 
             // UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,14 +361,13 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.UI_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.logo.ResumeLayout(false);
             this.logo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
@@ -399,6 +396,6 @@
         private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Label lblDateTime;
         private System.Windows.Forms.Panel logo;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel menu;
     }
 }

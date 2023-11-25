@@ -26,8 +26,29 @@ namespace QuanLyCuaHangDienThoai.GUI
         private void UI_Load(object sender, EventArgs e)
         {
             lblDateTime.Text = DateTime.Now.ToString();
+            menu.Controls.Add(tabSanPham);
+            menu.Controls.Add(tabKhuyenMai);
+            menu.Controls.Add(tabNhanVien);
+            menu.Controls.Add(tabTaiKhoan);
+            menu.Controls.Add(tabDonNhap);
+            menu.Controls.Add(tabNhaCungCap);
+            menu.Controls.Add(tabHoaDon);
+            menu.Controls.Add(tabKhachHang);
         }
-
+        private void activeTab(Control sender)
+        {
+            foreach (Control button in menu.Controls)
+            {
+                if(button.Equals(sender))
+                {
+                    button.BackColor = SystemColors.GradientActiveCaption;
+                }    
+                else
+                {
+                    button.BackColor = SystemColors.GradientInactiveCaption;
+                }    
+            }    
+        }
         private void tabSanPham_Click(object sender, EventArgs e)
         {
             if (qlsp_form == null) {
@@ -41,6 +62,7 @@ namespace QuanLyCuaHangDienThoai.GUI
                 splitContainer2.Panel2.Controls.Clear();
                 splitContainer2.Panel2.Controls.Add(qlsp_form);
             }
+            activeTab((Control)sender);
         }
 
         private void tabKhuyenMai_Click(object sender, EventArgs e)
@@ -57,6 +79,7 @@ namespace QuanLyCuaHangDienThoai.GUI
                 splitContainer2.Panel2.Controls.Clear();
                 splitContainer2.Panel2.Controls.Add(qlkm_form);
             }
+            activeTab((Control)sender);
         }
 
         private void tabKhachHang_Click(object sender, EventArgs e)
@@ -65,6 +88,7 @@ namespace QuanLyCuaHangDienThoai.GUI
             KhachHang_GUI kh = new KhachHang_GUI();
             kh.Dock = DockStyle.Fill;
             splitContainer2.Panel2.Controls.Add(kh);
+            activeTab((Control)sender);
         }
 
         private void tabHoaDon_Click(object sender, EventArgs e)
@@ -73,6 +97,7 @@ namespace QuanLyCuaHangDienThoai.GUI
             HoaDon_GUI hd = new HoaDon_GUI();
             hd.Dock = DockStyle.Fill;
             splitContainer2.Panel2.Controls.Add(hd);
+            activeTab((Control)sender);
         }
 
     }

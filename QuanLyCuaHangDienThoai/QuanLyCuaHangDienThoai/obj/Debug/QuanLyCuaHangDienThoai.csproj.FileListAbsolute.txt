@@ -42,3 +42,4 @@ C:\Users\tuanl\OneDrive\Documents\GitHub\DoAnC-sharp\QuanLyCuaHangDienThoai\Quan
 C:\Users\tuanl\OneDrive\Documents\GitHub\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\bin\Debug\QuanLyCuaHangDienThoai.exe.config
 C:\Users\tuanl\OneDrive\Documents\GitHub\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\bin\Debug\QuanLyCuaHangDienThoai.exe
 C:\Users\tuanl\OneDrive\Documents\GitHub\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\bin\Debug\QuanLyCuaHangDienThoai.pdb
+C:\Users\tuanl\OneDrive\Documents\GitHub\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.GUI.HoaDon_GUI.resources
