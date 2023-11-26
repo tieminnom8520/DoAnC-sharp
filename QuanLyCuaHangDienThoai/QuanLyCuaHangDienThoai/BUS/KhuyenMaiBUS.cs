@@ -94,7 +94,7 @@ namespace QuanLyCuaHangDienThoai.BUS
             DataTable data = db.Execute("Select MAKM from KhuyenMai");
             layDanhSachKhuyenMai();
             int makm = Convert.ToInt32(data.Rows[dsKhuyenMai.Rows.Count-1][0].ToString());
-            MessageBox.Show(makm + "");
+            /*MessageBox.Show(makm + "");*/
 
             for (int i = 0; i < DsChiTietKhuyenMai.Count; i++)
             {

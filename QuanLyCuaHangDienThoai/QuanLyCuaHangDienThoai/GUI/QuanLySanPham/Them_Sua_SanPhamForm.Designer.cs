@@ -414,13 +414,14 @@
             // 
             // button3
             // 
-            this.button3.BackgroundImage = global::QuanLyCuaHangDienThoai.Properties.Resources.back;
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(32, 46);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(612, 709);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(51, 47);
+            this.button3.Size = new System.Drawing.Size(86, 35);
             this.button3.TabIndex = 70;
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.Text = "Hủy";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -459,13 +460,13 @@
             // 
             this.titleLbl.AutoSize = true;
             this.titleLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLbl.Location = new System.Drawing.Point(28, 14);
+            this.titleLbl.Location = new System.Drawing.Point(17, 10);
             this.titleLbl.Name = "titleLbl";
-            this.titleLbl.Size = new System.Drawing.Size(107, 25);
+            this.titleLbl.Size = new System.Drawing.Size(207, 25);
             this.titleLbl.TabIndex = 71;
-            this.titleLbl.Text = "Thêm mới";
+            this.titleLbl.Text = "Thêm mới sản phẩm";
             // 
-            // ThemSanPhamForm
+            // Them_Sua_SanPhamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -505,7 +506,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTenSp);
             this.Controls.Add(this.label1);
-            this.Name = "ThemSanPhamForm";
+            this.Name = "Them_Sua_SanPhamForm";
             this.Size = new System.Drawing.Size(800, 758);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -183,6 +183,7 @@ namespace QuanLyCuaHangDienThoai.GUI.QuanLySanPham
 
         private void button3_Click(object sender, EventArgs e)
         {
+            this.qlsp_form.ReLoad();
             this.qlsp_form.parent_f.initQuanLySanPham();
         }
 
