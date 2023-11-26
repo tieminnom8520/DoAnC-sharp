@@ -35,18 +35,7 @@ namespace QuanLyCuaHangDienThoai.GUI
 
         private void tabKhuyenMai_Click(object sender, EventArgs e)
         {
-            if(qlkm_form == null)
-            {
-                splitContainer2.Panel2.Controls.Clear();
-                qlkm_form = new QuanLyKhuyenMaiFrm();
-                qlkm_form.Dock = DockStyle.Fill;
-                splitContainer2.Panel2.Controls.Add(qlkm_form);
-            }
-            else
-            {
-                splitContainer2.Panel2.Controls.Clear();
-                splitContainer2.Panel2.Controls.Add(qlkm_form);
-            }
+            initQuanLyKhuyenMai();
         }
 
         public void initQuanLySanPham()
@@ -63,6 +52,23 @@ namespace QuanLyCuaHangDienThoai.GUI
             {
                 splitContainer2.Panel2.Controls.Clear();
                 splitContainer2.Panel2.Controls.Add(qlsp_form);
+            }
+        }
+
+        public void initQuanLyKhuyenMai()
+        {
+            if (qlkm_form == null)
+            {
+                splitContainer2.Panel2.Controls.Clear();
+                qlkm_form = new QuanLyKhuyenMaiFrm();
+                qlkm_form.Dock = DockStyle.Fill;
+                splitContainer2.Panel2.Controls.Add(qlkm_form);
+                qlkm_form.parent_f = this;
+            }
+            else
+            {
+                splitContainer2.Panel2.Controls.Clear();
+                splitContainer2.Panel2.Controls.Add(qlkm_form);
             }
         }
     }

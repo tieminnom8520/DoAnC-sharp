@@ -78,6 +78,12 @@
     <Compile Include="GUI\QuanLyKhuyenMai\QuanLyKhuyenMaiFrm.Designer.cs">
       <DependentUpon>QuanLyKhuyenMaiFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\QuanLyKhuyenMai\Them_Sua_KM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyKhuyenMai\Them_Sua_KM.Designer.cs">
+      <DependentUpon>Them_Sua_KM.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\QuanLySanPham\ChiTietSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLyKhuyenMai\QuanLyKhuyenMaiFrm.resx">
       <DependentUpon>QuanLyKhuyenMaiFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyKhuyenMai\Them_Sua_KM.resx">
+      <DependentUpon>Them_Sua_KM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLySanPham\ChiTietSanPham.resx">
       <DependentUpon>ChiTietSanPham.cs</DependentUpon>

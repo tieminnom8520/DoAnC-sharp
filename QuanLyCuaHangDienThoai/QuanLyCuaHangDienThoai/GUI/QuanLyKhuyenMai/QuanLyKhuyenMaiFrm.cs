@@ -19,6 +19,9 @@ namespace QuanLyCuaHangDienThoai.GUI.QuanLyKhuyenMai
         public int ascending = 0;
         public string sortingColumn = null;
 
+        public UI parent_f;
+        private Them_Sua_KM them_sua_km;
+
         public QuanLyKhuyenMaiFrm()
         {
             InitializeComponent();
@@ -114,7 +117,10 @@ namespace QuanLyCuaHangDienThoai.GUI.QuanLyKhuyenMai
         // Gắn hành động cho nút Thêm
         private void themBtn_Click(object sender, EventArgs e)
         {
-            new Them_Sua_KhuyenMai(this, km_bus).Show();
+            them_sua_km = new Them_Sua_KM(this, km_bus);
+            them_sua_km.Dock = DockStyle.Fill;
+            parent_f.splitContainer2.Panel2.Controls.Clear();
+            parent_f.splitContainer2.Panel2.Controls.Add(them_sua_km);
         }
 
         // Gắn hành động cho nút Cập nhật
@@ -126,7 +132,10 @@ namespace QuanLyCuaHangDienThoai.GUI.QuanLyKhuyenMai
                 if (KhuyenMaiListView.SelectedItems[0].SubItems[3].Text == "Sắp diễn ra" || KhuyenMaiListView.SelectedItems[0].SubItems[3].Text == "Đang diễn ra")
                 {
                     km_bus.khuyenMaiChon = km_bus.dsKhuyenMai.Rows[KhuyenMaiListView.SelectedIndices[0]];
-                    new Them_Sua_KhuyenMai(this, km_bus, true).Show();   
+                    Them_Sua_KM them_sua_km = new Them_Sua_KM(this, km_bus, true);
+                    them_sua_km.Dock = DockStyle.Fill;
+                    parent_f.splitContainer2.Panel2.Controls.Clear();
+                    parent_f.splitContainer2.Panel2.Controls.Add(them_sua_km);
                 }
                 else
                 {

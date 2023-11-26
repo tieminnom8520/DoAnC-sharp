@@ -125,10 +125,10 @@
             this.ctkm_listview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ctkm_listview.FullRowSelect = true;
             this.ctkm_listview.HideSelection = false;
-            this.ctkm_listview.Location = new System.Drawing.Point(455, 47);
+            this.ctkm_listview.Location = new System.Drawing.Point(454, 47);
             this.ctkm_listview.MultiSelect = false;
             this.ctkm_listview.Name = "ctkm_listview";
-            this.ctkm_listview.Size = new System.Drawing.Size(328, 307);
+            this.ctkm_listview.Size = new System.Drawing.Size(329, 307);
             this.ctkm_listview.TabIndex = 7;
             this.ctkm_listview.UseCompatibleStateImageBehavior = false;
             this.ctkm_listview.View = System.Windows.Forms.View.Details;
@@ -166,7 +166,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(232, 3);
+            this.button5.Location = new System.Drawing.Point(233, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(93, 29);
             this.button5.TabIndex = 12;
@@ -177,7 +177,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(133, 3);
+            this.button6.Location = new System.Drawing.Point(134, 3);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(93, 29);
             this.button6.TabIndex = 13;
@@ -242,9 +242,9 @@
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(455, 0);
+            this.label6.Location = new System.Drawing.Point(454, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(328, 44);
+            this.label6.Size = new System.Drawing.Size(329, 44);
             this.label6.TabIndex = 19;
             this.label6.Text = "Các sản phẩm khuyến mãi :\r\n";
             // 
@@ -256,7 +256,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.88653F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.11348F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 334F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.chonLbl, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
@@ -272,6 +272,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.60564F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(786, 425);
             this.tableLayoutPanel1.TabIndex = 20;
             // 
@@ -291,9 +292,9 @@
             this.flowLayoutPanel2.Controls.Add(this.button6);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(455, 386);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(454, 386);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(328, 36);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(329, 36);
             this.flowLayoutPanel2.TabIndex = 21;
             // 
             // panel1
@@ -305,7 +306,7 @@
             this.panel1.Location = new System.Drawing.Point(346, 47);
             this.panel1.MaximumSize = new System.Drawing.Size(103, 307);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(103, 307);
+            this.panel1.Size = new System.Drawing.Size(102, 307);
             this.panel1.TabIndex = 22;
             // 
             // Them_Sua_KhuyenMai
