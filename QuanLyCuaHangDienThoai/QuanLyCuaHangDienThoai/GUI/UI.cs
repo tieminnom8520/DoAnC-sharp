@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyCuaHangDienThoai.BUS;
 using QuanLyCuaHangDienThoai.GUI.QuanLyKhuyenMai;
 using QuanLyCuaHangDienThoai.GUI.QuanLySanPham;
 
@@ -57,6 +58,24 @@ namespace QuanLyCuaHangDienThoai.GUI
                 splitContainer2.Panel2.Controls.Clear();
                 splitContainer2.Panel2.Controls.Add(qlkm_form);
             }
+        }
+
+        private void tabNhaCungCap_Click(object sender, EventArgs e)
+        {
+            this.splitContainer2.Panel2.Controls.Clear();
+            this.userControlNCC = new NhaCungCapGUI();
+            userControlNCC.Dock = DockStyle.Fill;
+            userControlNCC.Visible = true;
+            this.splitContainer2.Panel2.Controls.Add(this.userControlNCC);
+        }
+
+        private void tabDonNhap_Click(object sender, EventArgs e)
+        {
+            this.splitContainer2.Panel2.Controls.Clear();
+            this.userControlDN = new DonNhapGUI();
+            userControlDN.Dock = DockStyle.Fill;
+            userControlDN.Visible = true;
+            this.splitContainer2.Panel2.Controls.Add(this.userControlDN);
         }
     }
 }

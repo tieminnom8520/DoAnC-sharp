@@ -5,37 +5,74 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace QuanLyCuaHangDienThoai
+namespace QuanLyCuaHangDienThoai.DAO
 {
-    public class Database
+    internal class Database
     {
-        SqlConnection sqlConn;
+        SqlConnection sqlConn; //Doi tuong ket noi CSDL
         SqlDataAdapter da;//Bo dieu phoi du lieu
-        DataSet ds; //Doi tuong chhua CSDL khi giao tiep 
-        static string strCnn = "Data Source=DESKTOP-2T74JR3\\SQLEXPRESS; Database=CuaHangDienThoai; Integrated Security = True";
-
-        public  Database()
+        DataSet ds; //Doi tuong chhua CSDL khi giao tiep
+        public string srvName = @"HARRYHERE\SQLEXPRESS";
+        public string dbName = "CUAHANGDIENTHOAI";
+        public Database()
         {
-            sqlConn =  new SqlConnection(strCnn);
+            string connStr = "Data source=" + srvName + ";database=" + dbName + ";Integrated Security = True";
+            sqlConn = new SqlConnection(connStr);
+            try
+            {
+                sqlConn.Open();
+                Console.WriteLine("Connected");
+                sqlConn.Close();
+            }
+            catch (SqlException)
+            {
+                Console.WriteLine("Unconnected");
+            }
         }
-
-        public DataTable Execute(String sqlStr)
+        //Phuong thuc de thuc hien cau lenh strSQL truy vân du lieu
+        public DataTable Execute(string sqlStr)
         {
-
             da = new SqlDataAdapter(sqlStr, sqlConn);
             ds = new DataSet();
             da.Fill(ds);
             return ds.Tables[0];
         }
-
-        public void ExecuteNonQuery(String sqlStr)
+        //Phuong thuc de thuc hien cac lenh Them, Xoa, Sua
+        public void ExecuteNonQuery(string strSQL)
         {
-            SqlCommand sqlcmd = new SqlCommand(sqlStr, sqlConn);
-            sqlConn.Open(); //Mo ket noi
-            sqlcmd.ExecuteNonQuery();//Lenh hien lenh Them/Xoa/Sua
+            using (SqlCommand sqlcmd = new SqlCommand(strSQL, sqlConn))
+            {
+                sqlConn.Open(); //Mo ket noi
+                sqlcmd.ExecuteNonQuery();//Lenh hien lenh Them/Xoa/Sua
+            }
             sqlConn.Close();//Dong ket noi
         }
+        public int ExecuteScalar(string strSQL)
+        {
+            int count = 0;
+            try
+            {
+                using (SqlCommand sqlcmd = new SqlCommand(strSQL, sqlConn))
+                {
+                    sqlConn.Open(); // Mở kết nối
+                    count = (int)sqlcmd.ExecuteScalar(); // Thực hiện truy vấn và lấy kết quả
+                }
+            }
+            catch (Exception ex)
+            {
+                // Xử lý ngoại lệ tại đây
+                Console.WriteLine("Có lỗi xảy ra: " + ex.Message);
+            }
+            finally
+            {
+                if (sqlConn.State == ConnectionState.Open)
+                {
+                    sqlConn.Close(); // Đóng kết nối
+                }
+            }
+            return count;
+        }
+
     }
 }

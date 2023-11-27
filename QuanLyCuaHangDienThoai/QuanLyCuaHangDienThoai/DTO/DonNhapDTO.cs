@@ -8,13 +8,13 @@ namespace QuanLyCuaHangDienThoai.DTO
 {
     internal class DonNhapDTO
     {
-        private string maDN;
+        private int maDN;
         private string maNCC;
         private string maNV;
         private long tongTien;
         private DateTime ngayNhap;
 
-        public DonNhapDTO(string maDN, string maNCC, string maNV, long tongTien, DateTime ngayNhap)
+        public DonNhapDTO(int maDN, string maNCC, string maNV, long tongTien, DateTime ngayNhap)
         {
             this.maDN = maDN;
             this.maNCC = maNCC;
@@ -23,7 +23,7 @@ namespace QuanLyCuaHangDienThoai.DTO
             this.ngayNhap = ngayNhap;
         }
 
-        public string MaDN { get => maDN; set => maDN = value; }
+        public int MaDN { get => maDN; set => maDN = value; }
         public string MaNCC { get => maNCC; set => maNCC = value; }
         public string MaNV { get => maNV; set => maNV = value; }
         public long TongTien { get => tongTien; set => tongTien = value; }

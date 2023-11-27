@@ -46,6 +46,8 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.lblDateTime = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.userControlNCC = new System.Windows.Forms.UserControl();
+            this.userControlDN = new System.Windows.Forms.UserControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -53,6 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +63,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -81,8 +85,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1264, 681);
-            this.splitContainer1.SplitterDistance = 222;
+            this.splitContainer1.Size = new System.Drawing.Size(1685, 838);
+            this.splitContainer1.SplitterDistance = 295;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 1;
             // 
             // btnDangXuat
@@ -94,9 +99,10 @@
             this.btnDangXuat.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.Image")));
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(0, 636);
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 783);
+            this.btnDangXuat.Margin = new System.Windows.Forms.Padding(4);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(222, 45);
+            this.btnDangXuat.Size = new System.Drawing.Size(295, 55);
             this.btnDangXuat.TabIndex = 4;
             this.btnDangXuat.Text = "Đăng Xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
@@ -109,9 +115,10 @@
             this.tabKhuyenMai.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabKhuyenMai.Image = ((System.Drawing.Image)(resources.GetObject("tabKhuyenMai.Image")));
             this.tabKhuyenMai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tabKhuyenMai.Location = new System.Drawing.Point(0, 568);
+            this.tabKhuyenMai.Location = new System.Drawing.Point(0, 699);
+            this.tabKhuyenMai.Margin = new System.Windows.Forms.Padding(4);
             this.tabKhuyenMai.Name = "tabKhuyenMai";
-            this.tabKhuyenMai.Size = new System.Drawing.Size(249, 45);
+            this.tabKhuyenMai.Size = new System.Drawing.Size(332, 55);
             this.tabKhuyenMai.TabIndex = 4;
             this.tabKhuyenMai.Text = "Khuyến Mãi";
             this.tabKhuyenMai.UseVisualStyleBackColor = false;
@@ -125,12 +132,14 @@
             this.tabNhaCungCap.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabNhaCungCap.Image = ((System.Drawing.Image)(resources.GetObject("tabNhaCungCap.Image")));
             this.tabNhaCungCap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tabNhaCungCap.Location = new System.Drawing.Point(0, 442);
+            this.tabNhaCungCap.Location = new System.Drawing.Point(0, 544);
+            this.tabNhaCungCap.Margin = new System.Windows.Forms.Padding(4);
             this.tabNhaCungCap.Name = "tabNhaCungCap";
-            this.tabNhaCungCap.Size = new System.Drawing.Size(249, 45);
+            this.tabNhaCungCap.Size = new System.Drawing.Size(332, 55);
             this.tabNhaCungCap.TabIndex = 4;
             this.tabNhaCungCap.Text = "Nhà Cung Cấp";
             this.tabNhaCungCap.UseVisualStyleBackColor = false;
+            this.tabNhaCungCap.Click += new System.EventHandler(this.tabNhaCungCap_Click);
             // 
             // tabHoaDon
             // 
@@ -140,9 +149,10 @@
             this.tabHoaDon.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("tabHoaDon.Image")));
             this.tabHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tabHoaDon.Location = new System.Drawing.Point(0, 484);
+            this.tabHoaDon.Location = new System.Drawing.Point(0, 596);
+            this.tabHoaDon.Margin = new System.Windows.Forms.Padding(4);
             this.tabHoaDon.Name = "tabHoaDon";
-            this.tabHoaDon.Size = new System.Drawing.Size(249, 45);
+            this.tabHoaDon.Size = new System.Drawing.Size(332, 55);
             this.tabHoaDon.TabIndex = 4;
             this.tabHoaDon.Text = "Hóa Đơn";
             this.tabHoaDon.UseVisualStyleBackColor = false;
@@ -155,12 +165,14 @@
             this.tabDonNhap.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabDonNhap.Image = ((System.Drawing.Image)(resources.GetObject("tabDonNhap.Image")));
             this.tabDonNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tabDonNhap.Location = new System.Drawing.Point(0, 526);
+            this.tabDonNhap.Location = new System.Drawing.Point(0, 647);
+            this.tabDonNhap.Margin = new System.Windows.Forms.Padding(4);
             this.tabDonNhap.Name = "tabDonNhap";
-            this.tabDonNhap.Size = new System.Drawing.Size(249, 45);
+            this.tabDonNhap.Size = new System.Drawing.Size(332, 55);
             this.tabDonNhap.TabIndex = 4;
             this.tabDonNhap.Text = "Đơn Nhập";
             this.tabDonNhap.UseVisualStyleBackColor = false;
+            this.tabDonNhap.Click += new System.EventHandler(this.tabDonNhap_Click);
             // 
             // tabKhachHang
             // 
@@ -170,9 +182,10 @@
             this.tabKhachHang.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("tabKhachHang.Image")));
             this.tabKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tabKhachHang.Location = new System.Drawing.Point(0, 402);
+            this.tabKhachHang.Location = new System.Drawing.Point(0, 495);
+            this.tabKhachHang.Margin = new System.Windows.Forms.Padding(4);
             this.tabKhachHang.Name = "tabKhachHang";
-            this.tabKhachHang.Size = new System.Drawing.Size(249, 45);
+            this.tabKhachHang.Size = new System.Drawing.Size(332, 55);
             this.tabKhachHang.TabIndex = 4;
             this.tabKhachHang.Text = "Khách Hàng";
             this.tabKhachHang.UseVisualStyleBackColor = false;
@@ -185,9 +198,10 @@
             this.tabTaiKhoan.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabTaiKhoan.Image = ((System.Drawing.Image)(resources.GetObject("tabTaiKhoan.Image")));
             this.tabTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tabTaiKhoan.Location = new System.Drawing.Point(0, 360);
+            this.tabTaiKhoan.Location = new System.Drawing.Point(0, 443);
+            this.tabTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
             this.tabTaiKhoan.Name = "tabTaiKhoan";
-            this.tabTaiKhoan.Size = new System.Drawing.Size(249, 45);
+            this.tabTaiKhoan.Size = new System.Drawing.Size(332, 55);
             this.tabTaiKhoan.TabIndex = 4;
             this.tabTaiKhoan.Text = "Tài Khoản";
             this.tabTaiKhoan.UseVisualStyleBackColor = false;
@@ -200,9 +214,10 @@
             this.tabNhanVien.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("tabNhanVien.Image")));
             this.tabNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tabNhanVien.Location = new System.Drawing.Point(0, 318);
+            this.tabNhanVien.Location = new System.Drawing.Point(0, 391);
+            this.tabNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.tabNhanVien.Name = "tabNhanVien";
-            this.tabNhanVien.Size = new System.Drawing.Size(249, 45);
+            this.tabNhanVien.Size = new System.Drawing.Size(332, 55);
             this.tabNhanVien.TabIndex = 4;
             this.tabNhanVien.Text = "Nhân Viên";
             this.tabNhanVien.UseVisualStyleBackColor = false;
@@ -216,9 +231,10 @@
             this.tabSanPham.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabSanPham.Image = ((System.Drawing.Image)(resources.GetObject("tabSanPham.Image")));
             this.tabSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tabSanPham.Location = new System.Drawing.Point(0, 277);
+            this.tabSanPham.Location = new System.Drawing.Point(0, 341);
+            this.tabSanPham.Margin = new System.Windows.Forms.Padding(4);
             this.tabSanPham.Name = "tabSanPham";
-            this.tabSanPham.Size = new System.Drawing.Size(249, 45);
+            this.tabSanPham.Size = new System.Drawing.Size(332, 55);
             this.tabSanPham.TabIndex = 4;
             this.tabSanPham.Text = "Sản Phẩm";
             this.tabSanPham.UseVisualStyleBackColor = false;
@@ -230,7 +246,8 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 180);
+            this.label3.Location = new System.Drawing.Point(40, 222);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(166, 19);
             this.label3.TabIndex = 3;
@@ -242,7 +259,8 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(41, 161);
+            this.label2.Location = new System.Drawing.Point(54, 198);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 19);
             this.label2.TabIndex = 2;
@@ -255,7 +273,8 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(45, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(59, 28);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -271,13 +290,14 @@
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Margin = new System.Windows.Forms.Padding(0);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(222, 681);
+            this.treeView1.Size = new System.Drawing.Size(295, 838);
             this.treeView1.TabIndex = 0;
             // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -290,8 +310,11 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.splitContainer2.Size = new System.Drawing.Size(1038, 681);
-            this.splitContainer2.SplitterDistance = 92;
+            this.splitContainer2.Panel2.Controls.Add(this.userControlDN);
+            this.splitContainer2.Panel2.Controls.Add(this.userControlNCC);
+            this.splitContainer2.Size = new System.Drawing.Size(1385, 838);
+            this.splitContainer2.SplitterDistance = 113;
+            this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 0;
             // 
             // lblDateTime
@@ -299,7 +322,8 @@
             this.lblDateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDateTime.AutoSize = true;
             this.lblDateTime.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateTime.Location = new System.Drawing.Point(882, 39);
+            this.lblDateTime.Location = new System.Drawing.Point(1176, 48);
+            this.lblDateTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDateTime.Name = "lblDateTime";
             this.lblDateTime.Size = new System.Drawing.Size(72, 18);
             this.lblDateTime.TabIndex = 0;
@@ -310,19 +334,35 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 39);
+            this.label1.Location = new System.Drawing.Point(52, 48);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome: (username)";
             // 
+            // userControlNCC
+            // 
+            this.userControlNCC.Location = new System.Drawing.Point(308, 291);
+            this.userControlNCC.Name = "userControlNCC";
+            this.userControlNCC.Size = new System.Drawing.Size(150, 150);
+            this.userControlNCC.TabIndex = 0;
+            // 
+            // userControlDN
+            // 
+            this.userControlDN.Location = new System.Drawing.Point(645, 284);
+            this.userControlDN.Name = "userControlDN";
+            this.userControlDN.Size = new System.Drawing.Size(150, 150);
+            this.userControlDN.TabIndex = 1;
+            // 
             // UI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1685, 838);
             this.Controls.Add(this.splitContainer1);
-            this.MinimumSize = new System.Drawing.Size(1280, 720);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1701, 877);
             this.Name = "UI";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -335,6 +375,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
+            this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -360,5 +401,9 @@
         private System.Windows.Forms.Button tabDonNhap;
         private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Label lblDateTime;
+        private System.Windows.Forms.UserControl userControl1;
+        private System.Windows.Forms.UserControl userControl2;
+        private System.Windows.Forms.UserControl userControlNCC;
+        private System.Windows.Forms.UserControl userControlDN;
     }
 }

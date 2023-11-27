@@ -7,6 +7,7 @@ using System.Collections;
 using System.Data;
 using System.Windows.Forms;
 using QuanLyCuaHangDienThoai.DTO;
+using QuanLyCuaHangDienThoai.DAO;
 using System.Collections.Specialized;
 using System.ComponentModel;
 

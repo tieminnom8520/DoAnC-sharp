@@ -8,12 +8,12 @@ namespace QuanLyCuaHangDienThoai.DTO
 {
     internal class NhaCungCapDTO
     {
-        private string maNCC;
+        private int maNCC;
         private string tenNCC;
         private string diaChi;
         private string sdt;
 
-        public NhaCungCapDTO(string maNCC, string tenNCC, string diaChi, string sdt)
+        public NhaCungCapDTO(int maNCC, string tenNCC, string diaChi, string sdt)
         {
             this.maNCC = maNCC;
             this.tenNCC = tenNCC;
@@ -21,7 +21,7 @@ namespace QuanLyCuaHangDienThoai.DTO
             this.sdt = sdt;
         }
 
-        public string MaNCC { get => maNCC; set => maNCC = value; }
+        public int MaNCC { get => maNCC; set => maNCC = value; }
         public string TenNCC { get => tenNCC; set => tenNCC = value; }
         public string DiaChi { get => diaChi; set => diaChi = value; }
         public string Sdt { get => sdt; set => sdt = value; }

@@ -46,9 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\CTDonNhapBUS.cs" />
+    <Compile Include="BUS\DonNhapBUS.cs" />
     <Compile Include="BUS\KhuyenMaiBUS.cs" />
+    <Compile Include="BUS\NhaCungCapBUS.cs" />
     <Compile Include="BUS\SanPhamBUS.cs" />
+    <Compile Include="DAO\CTDonNhapDAO.cs" />
     <Compile Include="DAO\Database.cs" />
+    <Compile Include="DAO\DonNhapDAO.cs" />
+    <Compile Include="DAO\NhaCungCapDAO.cs" />
     <Compile Include="DTO\ChiTietKhuyenMaiDTO.cs" />
     <Compile Include="DTO\ChiTietHoaDonDTO.cs" />
     <Compile Include="DTO\ChiTietDonNhapDTO.cs" />
@@ -65,6 +71,24 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CTDonNhapGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CTDonNhapGUI.Designer.cs">
+      <DependentUpon>CTDonNhapGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyDonNhap\DonNhapGUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyDonNhap\DonNhapGUI.Designer.cs">
+      <DependentUpon>DonNhapGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLyDonNhap\Timkiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLyDonNhap\Timkiem.Designer.cs">
+      <DependentUpon>Timkiem.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\QuanLyKhuyenMai\Them_Sua_KhuyenMai.cs">
       <SubType>Form</SubType>
@@ -96,6 +120,12 @@
     <Compile Include="GUI\QuanLySanPham\ChiTietSanPham.Designer.cs">
       <DependentUpon>ChiTietSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\NhaCungCapGUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NhaCungCapGUI.Designer.cs">
+      <DependentUpon>NhaCungCapGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\QuanLySanPham\QuanLySanPhamForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,6 +146,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\CTDonNhapGUI.resx">
+      <DependentUpon>CTDonNhapGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyDonNhap\DonNhapGUI.resx">
+      <DependentUpon>DonNhapGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhaCungCapGUI.resx">
+      <DependentUpon>NhaCungCapGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLyDonNhap\Timkiem.resx">
+      <DependentUpon>Timkiem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLyKhuyenMai\Them_Sua_KhuyenMai.resx">
       <DependentUpon>Them_Sua_KhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +190,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -170,6 +213,7 @@
     <Content Include="img\invoice.png" />
     <Content Include="img\logout.png" />
     <Content Include="img\rating.png" />
+    <None Include="img\search.png" />
     <Content Include="img\smartphone %282%29.png" />
     <Content Include="img\smartphone %283%29.png" />
     <Content Include="img\user.png" />

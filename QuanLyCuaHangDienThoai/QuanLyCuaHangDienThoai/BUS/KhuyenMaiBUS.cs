@@ -6,10 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyCuaHangDienThoai.DAO;
 
 namespace QuanLyCuaHangDienThoai.BUS
 {
-    public  class KhuyenMaiBUS
+    public  class KhuyenMaiBUS 
     {
         Database db;
         public DataTable dsKhuyenMai;
