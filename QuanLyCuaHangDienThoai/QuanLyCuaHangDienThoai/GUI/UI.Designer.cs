@@ -46,6 +46,7 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.lblDateTime = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -64,6 +65,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.btnDangXuat);
             this.splitContainer1.Panel1.Controls.Add(this.tabKhuyenMai);
             this.splitContainer1.Panel1.Controls.Add(this.tabNhaCungCap);
@@ -316,6 +318,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome: (username)";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 226);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(249, 45);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Thống kê";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -360,5 +378,6 @@
         private System.Windows.Forms.Button tabDonNhap;
         private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Label lblDateTime;
+        private System.Windows.Forms.Button button1;
     }
 }
