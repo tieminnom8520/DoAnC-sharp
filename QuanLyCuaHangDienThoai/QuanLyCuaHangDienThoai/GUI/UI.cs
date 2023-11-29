@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyCuaHangDienThoai.GUI.QuanLyKhuyenMai;
 using QuanLyCuaHangDienThoai.GUI.QuanLySanPham;
+using QuanLyCuaHangDienThoai.GUI.ThongKe;
 
 namespace QuanLyCuaHangDienThoai.GUI
 {
@@ -16,6 +17,7 @@ namespace QuanLyCuaHangDienThoai.GUI
     {
         private QuanLySanPhamForm qlsp_form = null;
         private QuanLyKhuyenMaiFrm qlkm_form = null;
+        private ThongKeForm thongKe_form = null;
 
         public UI()
         {
@@ -69,6 +71,23 @@ namespace QuanLyCuaHangDienThoai.GUI
             {
                 splitContainer2.Panel2.Controls.Clear();
                 splitContainer2.Panel2.Controls.Add(qlkm_form);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(thongKe_form == null)
+            {
+                splitContainer2.Panel2.Controls.Clear();
+                thongKe_form = new ThongKeForm();
+                thongKe_form.Dock = DockStyle.Fill;
+                thongKe_form.parent_f = this;
+                splitContainer2.Panel2.Controls.Add(thongKe_form);
+            }
+            else
+            {
+                splitContainer2.Panel2.Controls.Clear();
+                splitContainer2.Panel2.Controls.Add(thongKe_form);
             }
         }
     }
