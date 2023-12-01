@@ -80,8 +80,7 @@ namespace QuanLyCuaHangDienThoai.GUI.ThongKe
                 }
             }
 
-            chart1.Titles.Add(title_chart);
-            
+            chart1.Titles.Add(title_chart).Font = new System.Drawing.Font("Tahoma", 15);
             // vẽ và điền bảng
             veBieuDo_DienBang();
             resizeListView();
@@ -109,17 +108,15 @@ namespace QuanLyCuaHangDienThoai.GUI.ThongKe
                     title_chart += "tháng " + thang;
                 }
             }
-            chart1.Titles.Add(title_chart);
+            chart1.Titles.Add(title_chart).Font = new System.Drawing.Font("Tahoma", 15);
 
             // TODO : chuẩn bị biểu đồ 
             chart1.Legends.Clear();
             chart1.Series.Clear();
             chart1.Titles.Clear();
 
-
             // vẽ và điền bảng
             veBieuDo_DienBang();
-            series.ChartType = SeriesChartType.Pie;
             resizeListView();
         }
 
@@ -140,7 +137,8 @@ namespace QuanLyCuaHangDienThoai.GUI.ThongKe
             {
                 title_chart += "năm " + nam;
             }
-            chart1.Titles.Add(title_chart);
+            chart1.Titles.Add(title_chart).Font = new System.Drawing.Font("Tahoma", 15);
+            
 
             // TODO : chuẩn bị biểu đồ 
             chart1.Legends.Clear();
@@ -234,6 +232,7 @@ namespace QuanLyCuaHangDienThoai.GUI.ThongKe
         {
             series = new Series();
             chart1.Series.Add(series);
+            chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.Font = new System.Drawing.Font("Arial", 12, System.Drawing.FontStyle.Regular);
             for (int i = 0; i < tk_bus.tk_table.Rows.Count; i++)
             {
                 if (Int64.Parse(tk_bus.tk_table.Rows[i][1].ToString().Split('.')[0]) > 0)
@@ -244,6 +243,7 @@ namespace QuanLyCuaHangDienThoai.GUI.ThongKe
                     DataPoint dataPoint = new DataPoint();
                     dataPoint.SetValueXY(tk_bus.tk_table.Rows[i][0].ToString(), Int64.Parse(tk_bus.tk_table.Rows[i][1].ToString().Split('.')[0]));
                     dataPoint.Color = chart1.PaletteCustomColors[i % chart1.PaletteCustomColors.Count()];
+                    dataPoint.ToolTip = tk_bus.tk_table.Rows[i][0].ToString();
                     series.Points.Add(dataPoint);
                 }
 
@@ -273,7 +273,6 @@ namespace QuanLyCuaHangDienThoai.GUI.ThongKe
                     thang = 0;
                 }
                 int nam = Int32.Parse(namCmbx.SelectedItem.ToString());
-                MessageBox.Show(nam+"");
                 initThongKeNhanVien(nam, thang, true);
             }
             else

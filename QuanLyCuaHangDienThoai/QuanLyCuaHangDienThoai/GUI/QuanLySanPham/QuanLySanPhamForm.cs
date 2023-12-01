@@ -179,5 +179,42 @@ namespace QuanLyCuaHangDienThoai.GUI.QuanLySanPham
                 /*MessageBox.Show(sp_bus.sanPhamDangChon[1].ToString());*/
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if(SanPhamListView.SelectedIndices.Count > 0)
+            {
+                if (sp_bus.xoaDuocKhong(Int32.Parse(sp_bus.sanPhamDangChon[0].ToString())))
+                {
+                    DialogResult xacNhan = MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm",
+                                     "Xác nhận!",
+                                     MessageBoxButtons.YesNo);
+                    if (xacNhan == DialogResult.Yes)
+                    {
+                        sp_bus.XoaSanPham(Int32.Parse(sp_bus.sanPhamDangChon[0].ToString()));
+                        ReLoad();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Sản phẩm này đã có dữ liệu kinh doanh, không thể xóa");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn 1 sản phẩm trong bảng");
+            }
+        }
+        private void importByExcel()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Excel Files|*.xlsx|All Files|*.*";
+            openFileDialog.Title = "Chọn file Excel";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string selectedFile = openFileDialog.FileName;
+                sp_bus.ThemSanPhamBangExcel(selectedFile);
+            }
+        }
     }
 }

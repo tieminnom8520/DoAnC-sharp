@@ -63,6 +63,13 @@ namespace QuanLyCuaHangDienThoai.GUI.QuanLySanPham
                  || txtPin.Text.Trim() == "" || txtPhuKien.Text.Trim() == "" || txtCamera.Text.Trim() == "")
             {
                 MessageBox.Show("Vui lòng điền đủ thông tin");
+                return;
+            }
+
+            if (!checkDulicate())
+            {
+                MessageBox.Show("Sản phẩm bị trùng tên, vui lòng chọn tên khác");
+                return;
             }
             // kiểm tra giá 
             try
@@ -72,6 +79,7 @@ namespace QuanLyCuaHangDienThoai.GUI.QuanLySanPham
             catch (Exception ex)
             {
                 MessageBox.Show("Vui lòng nhập giá hợp lệ");
+                return;
             }
             // kiểm tra năm
             try
@@ -81,6 +89,7 @@ namespace QuanLyCuaHangDienThoai.GUI.QuanLySanPham
             catch
             {
                 MessageBox.Show("Vui lòng nhập năm sản xuất hợp lệ");
+                return;
             }
             // kiểm tra tháng bảo hành
             try
@@ -90,6 +99,7 @@ namespace QuanLyCuaHangDienThoai.GUI.QuanLySanPham
             catch
             {
                 MessageBox.Show("Vui lòng nhập năm sản xuất hợp lệ");
+                return;
             }
 
             // them hoặc cập nhật
@@ -209,6 +219,29 @@ namespace QuanLyCuaHangDienThoai.GUI.QuanLySanPham
                 pictureBox1.BackgroundImage = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "\\..\\..\\img\\dienthoai\\" + hinhAnhLbl.Text + ".png");
             else
                 pictureBox1.BackgroundImage = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "\\..\\..\\img\\dienthoai\\notfound.png");
+        }
+
+        public bool checkDulicate()
+        {
+            for(int i =0; i < sp_bus.DsSanPham.Rows.Count;i++)
+            {
+                if (!capnhat)
+                {
+                    if (sp_bus.DsSanPham.Rows[i][1].ToString().Equals(txtTenSp.Text))
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    if (sp_bus.DsSanPham.Rows[i][1].ToString().Equals(txtTenSp.Text) && !sp_bus.sanPhamDangChon[0].ToString().Equals(sp_bus.DsSanPham.Rows[i][0].ToString()))
+                    {
+                        return false;
+                    }
+                }
+               
+            }
+            return true;
         }
     }
 }

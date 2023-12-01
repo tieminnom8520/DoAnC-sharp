@@ -80,5 +80,10 @@ namespace QuanLyCuaHangDienThoai.DTO
                 "tensp = N'{0}', IMAGE = N'{1}', hang=N'{2}', dongia={3}, cpu=N'{4}', gpu=N'{5}', ram=N'{6}', bonho=N'{7}', manhinh=N'{8}', os=N'{9}', namsx={10}, thoigianbaohanh={11}, pin=N'{12}', phukien=N'{13}', camera=N'{14}' " +
                 "where masp = {15}", TenSP, ImageURL, Hang, DonGia, CPU, GPU, RAM, BoNho, ManHinh, HeDieuHanh, NamSX, ThoiGianBaoHanh, Pin, PhuKien, Camera, MaSP);
         }
+
+        public string deleteString()
+        {
+            return "Delete Sanpham where masp = " + maSP;
+        }
     }
 }
