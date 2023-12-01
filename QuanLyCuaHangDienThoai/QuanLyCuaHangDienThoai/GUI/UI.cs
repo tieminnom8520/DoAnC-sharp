@@ -27,14 +27,29 @@ namespace QuanLyCuaHangDienThoai.GUI
 
         private void UI_Load(object sender, EventArgs e)
         {
+            lbUsername.Text = name;
             lblDateTime.Text = DateTime.Today.ToString();
+            timerDateandTime.Start();
         }
 
         private void tabSanPham_Click(object sender, EventArgs e)
         {
            initQuanLySanPham();
         }
-
+        private void tabTaiKhoan_Click(object sender, EventArgs e)
+        {
+            splitContainer2.Panel2.Controls.Clear();
+            TaiKhoan_GUI tk = new TaiKhoan_GUI();
+            tk.Dock = DockStyle.Fill;
+            splitContainer2.Panel2.Controls.Add(tk);
+        }
+        private void tabNhanVien_Click(object sender, EventArgs e)
+        {
+            splitContainer2.Panel2.Controls.Clear();
+            NhanVien_GUI nv = new NhanVien_GUI();
+            nv.Dock = DockStyle.Fill;
+            splitContainer2.Panel2.Controls.Add(nv);
+        }
         private void tabKhuyenMai_Click(object sender, EventArgs e)
         {
             initQuanLyKhuyenMai();
@@ -89,6 +104,19 @@ namespace QuanLyCuaHangDienThoai.GUI
                 splitContainer2.Panel2.Controls.Clear();
                 splitContainer2.Panel2.Controls.Add(thongKe_form);
             }
+        }
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Ban muon dang xuat ?","Question",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(dialogResult == DialogResult.Yes)
+            {
+                timerDateandTime.Stop();
+                Close();
+            }
+        }
+        private void timerDateandTime_Tick(object sender, EventArgs e)
+        {
+            lblDateTime.Text = DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss ");
         }
     }
 }
