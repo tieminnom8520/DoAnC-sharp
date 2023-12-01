@@ -46,3 +46,10 @@ C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\Quan
 C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.csproj.CopyComplete
+C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\bin\Debug\EPPlus.dll
+C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\bin\Debug\EPPlus.xml
+C:\Users\ACER\source\repos\tieminnom8520\DoAnC-sharp\QuanLyCuaHangDienThoai\QuanLyCuaHangDienThoai\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
