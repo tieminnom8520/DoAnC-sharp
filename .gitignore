@@ -19,3 +19,6 @@ QuanLyCuaHangDienThoai/QuanLyCuaHangDienThoai/obj/Debug/QuanLyCuaHangDienThoai.c
 QuanLyCuaHangDienThoai/QuanLyCuaHangDienThoai/obj/Debug/QuanLyCuaHangDienThoai.exe
 QuanLyCuaHangDienThoai/QuanLyCuaHangDienThoai/obj/Debug/QuanLyCuaHangDienThoai.pdb
 *.cache
+.vs/
+bin/
+obj/
