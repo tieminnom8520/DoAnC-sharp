@@ -18,7 +18,7 @@ namespace QuanLyCuaHangDienThoai.GUI
         private QuanLySanPhamForm qlsp_form = null;
         private QuanLyKhuyenMaiFrm qlkm_form = null;
         private ThongKeForm thongKe_form = null;
-
+        public string name = "?";
         public UI()
         {
             InitializeComponent();
