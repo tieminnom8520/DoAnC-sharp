@@ -3,8 +3,10 @@
     "",
     "\\QuanLyCuaHangDienThoai",
     "\\QuanLyCuaHangDienThoai\\QuanLyCuaHangDienThoai",
-    "\\QuanLyCuaHangDienThoai\\QuanLyCuaHangDienThoai\\DTO"
+    "\\QuanLyCuaHangDienThoai\\QuanLyCuaHangDienThoai\\DTO",
+    "\\QuanLyCuaHangDienThoai\\QuanLyCuaHangDienThoai\\GUI",
+    "\\QuanLyCuaHangDienThoai\\QuanLyCuaHangDienThoai\\obj"
   ],
-  "SelectedNode": "\\QuanLyCuaHangDienThoai\\QuanLyCuaHangDienThoai\\DTO\\ChiTietHoaDonDTO.cs",
-  "PreviewInSolutionExplorer": false
+  "SelectedNode": "\\QuanLyCuaHangDienThoai\\QuanLyCuaHangDienThoai\\DTO\\NhaCungCapDTO.cs",
+  "PreviewInSolutionExplorer": true
 }
